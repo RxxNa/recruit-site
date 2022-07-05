@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*
+COLOR
+================================================ */
+/*
+GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+/*
+COMMON
+================================================ */
+p {
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: "Noto Serif JP", serif;
+}
+
+.wrapper {
+  padding: 0 320px;
+  margin: 0 auto;
+}
+
+/*
+HEADER
+================================================ */
+header {
+  background-image: url(/images/mv.jpg);
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 30px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+.header-title h2 a {
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  padding-right: 20px;
+}
+nav ul li a {
+  color: #333;
+  position: relative;
+}
+nav ul li a:hover {
+  color: #4d4d4d;
+  cursor: pointer;
+}
+nav ul li a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #4d4d4d;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+  transition: transform 0.3s;
+  /*変形の時間*/
+}
+nav ul li a:hover::after {
+  transform: scale(1, 1);
+  /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
+.hero-title {
+  position: absolute;
+  top: 40%;
+  left: 70px;
+  font-size: 30px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
