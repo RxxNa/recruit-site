@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Noto Serif JP", serif;
 }
 
@@ -66,6 +66,9 @@ header {
 .header-title h2 a {
   color: #333;
 }
+.header-title h2 a:hover {
+  cursor: pointer;
+}
 
 nav ul {
   display: flex;
@@ -79,7 +82,7 @@ nav ul li a {
   position: relative;
 }
 nav ul li a:hover {
-  color: #4d4d4d;
+  color: rgb(117, 117, 117);
   cursor: pointer;
 }
 nav ul li a::after {
@@ -88,17 +91,14 @@ nav ul li a::after {
   content: "";
   width: 100%;
   height: 1px;
-  background: #4d4d4d;
+  background: rgb(117, 117, 117);
   bottom: -1px;
   transform: scale(0, 1);
-  transform-origin: center top;
-  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-  transition: transform 0.3s;
-  /*変形の時間*/
+  transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+  transition: transform 0.3s; /*変形の時間*/
 }
 nav ul li a:hover::after {
-  transform: scale(1, 1);
-  /*ホバー後、x軸方向に1（相対値）伸長*/
+  transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
 .hero-title {
@@ -107,5 +107,347 @@ nav ul li a:hover::after {
   left: 70px;
   font-size: 30px;
   font-weight: bold;
+}
+
+/*
+NEWS
+================================================ */
+.news {
+  margin: 80px 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.title h2 {
+  font-size: 2.7rem;
+}
+.title p {
+  font-size: 12px;
+}
+
+.category {
+  margin-bottom: 50px;
+}
+.category ul {
+  display: flex;
+  justify-content: space-between;
+}
+.category ul li {
+  position: relative;
+}
+.category ul li::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 134px;
+  height: 1px;
+  background-color: #333;
+  bottom: -10px;
+  left: calc(50% - 65px);
+}
+.category ul li:hover::after {
+  background-color: #bb131a;
+  cursor: pointer;
+}
+.category ul a {
+  color: #333;
+}
+.category ul a:hover {
+  cursor: pointer;
+  color: #bb131a;
+}
+
+.news-list {
+  margin-top: 60px;
+}
+.news-list li {
+  margin-bottom: 40px;
+  position: relative;
+}
+.news-list li::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 810px;
+  height: 1px;
+  background-color: #333;
+  bottom: -10px;
+}
+.news-list a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333;
+}
+.news-list a:hover {
+  cursor: pointer;
+  color: rgb(117, 117, 117);
+}
+.news-list a img {
+  margin-right: 30px;
+  width: 30%;
+}
+.news-list a img:hover {
+  filter: opacity(70%);
+  cursor: pointer;
+}
+
+.item-tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+}
+.item-tag time {
+  margin-right: 20px;
+  font-size: 12px;
+}
+.item-tag p {
+  font-size: 14px;
+  color: #fff;
+  background: #333;
+  padding: 3px 15px;
+}
+
+.news-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn {
+  text-align: center;
+  position: relative;
+}
+
+.btn-1 {
+  margin: 30px 0;
+  font-size: 15px;
+  color: #fff;
+  background: #bb131a;
+  padding: 15px 95px;
+  transition: all 0.3s;
+}
+.btn-1:hover {
+  color: #333;
+  background: #fff;
+  border: 1px solid #333;
+}
+.btn-1::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 57px;
+  height: 1px;
+  top: 50%;
+  left: 460px;
+}
+.btn-1:hover::after {
+  background-color: #333;
+}
+
+/*
+GREETING
+================================================ */
+.greeting {
+  margin: 80px 0;
+  position: relative;
+  width: 1440px;
+  height: 750px;
+}
+
+.bg-top {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 300px 300px 0 0;
+  border-color: #e21b23 transparent transparent transparent;
+}
+
+.greeting-ment {
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+
+.ment {
+  padding: 5px 485px 0 320px;
+}
+.ment h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.ment p {
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.ceo {
+  position: absolute;
+  width: 200px;
+  right: 260px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bg-bottom {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 500px 500px;
+  border-color: transparent transparent #bb1319 transparent;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/*
+ABOUT
+================================================ */
+.company {
+  margin-bottom: 120px;
+}
+.company dl {
+  width: 100%;
+  position: relative;
+}
+.company dl dt img {
+  width: 700px;
+}
+.company dt {
+  display: flex;
+  justify-content: flex-end;
+}
+.company dd {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 30px 40px;
+  z-index: 2;
+}
+.company dd .sub-title {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.company dd .about-text {
+  font-size: 15px;
+  padding: 0 20px;
+}
+.company dd:before {
+  position: absolute;
+  top: 11px;
+  left: -11px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 1px solid #333;
+}
+
+.btn_01 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.btn_01 .btn-3 {
+  position: relative;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 55px;
+  transition: all 0.3s;
+}
+.btn_01 .btn-3:hover {
+  color: #333;
+  background: #fff;
+}
+.btn_01 .btn-3::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 35px;
+  height: 1px;
+  top: 50%;
+  right: 0px;
+}
+.btn_01 .btn-3:hover::after {
+  background-color: #333;
+}
+
+.recruit {
+  margin-bottom: 120px;
+}
+.recruit dl {
+  width: 100%;
+  position: relative;
+}
+.recruit dt img {
+  width: 700px;
+}
+.recruit dd {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 30px 40px;
+  z-index: 2;
+}
+.recruit dd .sub-title {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.recruit dd .about-text {
+  font-size: 15px;
+  padding: 0 20px;
+}
+.recruit dd:before {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 1px solid #333;
+}
+
+.btn_01 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.btn_01 .btn-3 {
+  position: relative;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 55px;
+  transition: all 0.3s;
+}
+.btn_01 .btn-3:hover {
+  color: #333;
+  background: #fff;
+}
+.btn_01 .btn-3::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 35px;
+  height: 1px;
+  top: 50%;
+  right: 0px;
+}
+.btn_01 .btn-3:hover::after {
+  background-color: #333;
 }
 /*# sourceMappingURL=style.css.map */

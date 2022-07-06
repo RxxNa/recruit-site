@@ -2,7 +2,9 @@
 COLOR
 ================================================ */
 $Black: #333;
-$Hover: rgb(77, 77, 77);
+$Hover: rgb(117, 117, 117);
+$Red: #bb131a;
+$White: #fff;
 /*
 GENERAL STYLING
 ================================================ */
@@ -29,7 +31,7 @@ li{
 a {
   text-decoration: none;
 }
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Noto Serif JP', serif;
 } 
 .wrapper {
@@ -104,4 +106,377 @@ nav ul {
   left: 70px;
   font-size: 30px;
   font-weight: bold;
+}
+/*
+NEWS
+================================================ */
+.news {
+  margin: 80px 0;
+}
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 2.7rem;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+.category  {
+  margin-bottom: 50px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  
+    li {
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 134px;
+        height: 1px;
+        background-color: $Black;
+        bottom: -10px;
+        left: calc(50% - 65px);
+      }
+
+      &:hover::after {
+        background-color: $Red;
+        cursor: pointer;
+      }
+    }
+  
+    a {
+      color: $Black;
+  
+      &:hover {
+        cursor: pointer;
+        color: $Red;
+      }
+    }
+  }
+}
+.news-list {
+  margin-top: 60px;
+
+  li {
+    margin-bottom: 40px;
+    position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 810px;
+        height: 1px;
+        background-color: $Black;
+        bottom: -10px;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $Black;
+
+      &:hover {
+        cursor: pointer;
+        color: $Hover;
+      }
+
+      img {
+        margin-right: 30px;
+        width: 30%;
+
+        &:hover {
+          filter: opacity(70%);
+          cursor: pointer;
+        }
+      }
+    }
+}
+.item-tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+
+  time {
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $White;
+    background: $Black;
+    padding: 3px 15px;
+  }
+}
+.news-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.btn {
+  text-align: center;
+  position: relative;
+}
+.btn-1 {
+  margin: 30px 0;
+  font-size: 15px;
+  color: $White;
+  background: $Red;
+  padding: 15px 95px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $Black;
+    background: $White;
+    border: 1px solid $Black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #fff;
+    width: 57px;
+    height: 1px;
+    top: 50%;
+    left: 460px;
+  }
+
+  &:hover::after {
+    background-color: $Black;
+  }
+
+}
+
+/*
+GREETING
+================================================ */
+.greeting {
+  margin: 80px 0;
+  position: relative;
+  width: 1440px;
+  height: 750px;
+}
+.bg-top {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 300px 300px 0 0;
+  border-color: #e21b23 transparent transparent transparent;
+}
+.greeting-ment {
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+.ment {
+  padding: 5px 485px 0 320px;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+}
+.ceo {
+  position: absolute;
+  width: 200px;
+  right: 260px;
+  bottom: 0;
+  z-index: 1;
+}
+.bg-bottom {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 500px 500px;
+  border-color: transparent transparent #bb1319 transparent;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/*
+ABOUT
+================================================ */
+
+// company
+.company {
+  margin-bottom: 120px;
+
+  dl {
+    width: 100%;
+    position: relative;
+  }
+
+  dl dt img {
+    width: 700px;
+  }
+
+  dt {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  dd {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-color: $Black;
+    color: $White;
+    padding: 30px 40px;
+    z-index: 2;
+
+    .sub-title {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .about-text {
+      font-size: 15px;
+      padding: 0 20px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 11px;
+      left: -11px;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border: 1px solid $Black;
+    }
+    
+  }
+}
+.btn_01 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+
+  .btn-3 {
+    position: relative;
+    font-size: 13px;
+    color: $White;
+    border: 1px solid $White;
+    padding: 10px 55px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $Black;
+      background: $White;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-color: $White;
+      width: 35px;
+      height: 1px;
+      top: 50%;
+      right: 0px;
+    }
+
+    &:hover::after {
+      background-color: $Black;
+    }
+  }
+}
+
+// recruit
+.recruit {
+  margin-bottom: 120px;
+
+  dl {
+    width: 100%;
+    position: relative;
+  }
+
+    dt img {
+      width: 700px;
+    }
+
+    dd {
+      width: 50%;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      background-color: $Black;
+      color: $White;
+      padding: 30px 40px;
+      z-index: 2;
+
+      .sub-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+  
+      .about-text {
+        font-size: 15px;
+        padding: 0 20px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: 1px solid $Black;
+      }
+    }
+}
+.btn_01 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+
+  .btn-3 {
+    position: relative;
+    font-size: 13px;
+    color: $White;
+    border: 1px solid $White;
+    padding: 10px 55px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $Black;
+      background: $White;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-color: $White;
+      width: 35px;
+      height: 1px;
+      top: 50%;
+      right: 0px;
+    }
+    
+    &:hover::after {
+      background-color: $Black;
+    }
+  }
 }
