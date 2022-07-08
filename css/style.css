@@ -34,7 +34,9 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Noto Serif JP", serif;
 }
 
@@ -94,11 +96,14 @@ nav ul li a::after {
   background: rgb(117, 117, 117);
   bottom: -1px;
   transform: scale(0, 1);
-  transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-  transition: transform 0.3s; /*変形の時間*/
+  transform-origin: center top;
+  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+  transition: transform 0.3s;
+  /*変形の時間*/
 }
 nav ul li a:hover::after {
-  transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+  transform: scale(1, 1);
+  /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
 .hero-title {
@@ -218,10 +223,10 @@ NEWS
 
 .btn {
   text-align: center;
-  position: relative;
 }
 
 .btn-1 {
+  position: relative;
   margin: 30px 0;
   font-size: 15px;
   color: #fff;
@@ -242,7 +247,7 @@ NEWS
   width: 57px;
   height: 1px;
   top: 50%;
-  left: 460px;
+  right: 0;
 }
 .btn-1:hover::after {
   background-color: #333;
@@ -505,10 +510,14 @@ VOICE
   transform: translateY(60px);
 }
 
-.sales, .accounting, .planning {
+.sales,
+.accounting,
+.planning {
   position: relative;
 }
-.sales h3, .accounting h3, .planning h3 {
+.sales h3,
+.accounting h3,
+.planning h3 {
   position: absolute;
   font-size: 15px;
   left: -8px;
@@ -517,7 +526,9 @@ VOICE
   background-color: #333;
   padding: 3px 30px;
 }
-.sales h3:before, .accounting h3:before, .planning h3:before {
+.sales h3:before,
+.accounting h3:before,
+.planning h3:before {
   position: absolute;
   top: 3px;
   left: 3px;
@@ -525,5 +536,122 @@ VOICE
   height: 100%;
   content: "";
   border: 1px solid #fff;
+}
+
+/*
+FAQ
+================================================ */
+.faq {
+  margin-bottom: 120px;
+}
+
+.line {
+  border-bottom: 1px solid #000;
+}
+
+.accordionTitle {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+.accordionTitle:before {
+  content: "\f059";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+.accordionTitle:hover, .accordionTitle.active {
+  color: rgb(117, 117, 117);
+}
+
+.accordionContent {
+  padding: 0 40px;
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  transition: all 0.5s ease;
+}
+.accordionContent p {
+  position: relative;
+  font-size: 1rem;
+  padding: 0 0 0 11px;
+}
+.accordionContent p:before {
+  content: "A";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: #bb131a;
+  position: absolute;
+  top: 7%;
+  left: -19px;
+}
+.accordionContent > * + * {
+  margin-top: 0;
+}
+.accordionContent.open {
+  padding: 20px 40px;
+  opacity: 1;
+  line-height: normal;
+  height: auto;
+}
+.accordionContent.open > * + * {
+  margin-top: 10px;
+}
+
+/*
+ENTRY
+================================================ */
+.entry {
+  padding: 80px;
+  background: #2d2d2d;
+}
+.entry .title {
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.btn-4 {
+  position: relative;
+  margin: 30px 0;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 95px;
+  transition: all 0.3s;
+}
+.btn-4:hover {
+  color: #333;
+  background: #fff;
+}
+.btn-4::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  width: 57px;
+  height: 1px;
+  top: 50%;
+  right: 0;
+}
+.btn-4:hover::after {
+  background-color: #333;
+}
+
+/*
+FOOTER
+================================================ */
+footer {
+  padding: 10px 10px;
+  background: #000;
+}
+footer p small {
+  text-align: center;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
