@@ -594,6 +594,11 @@ VOICE
       border: 1px solid $White;
     }
   }
+
+  &:hover {
+    opacity: 0.5;
+    transition: all .5s ease;
+  }
 }
 
 /*
