@@ -720,9 +720,44 @@ FOOTER
 footer {
   padding: 10px 10px;
   background: #000;
+  position: relative;
 
   p small {
-    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 46%;
     color: $White;
+  }
+}
+
+.page-top-btn {
+  top: 0;
+  left: 94%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: $Red;
+  padding-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  font-size: 85%;
+  text-decoration: none;
+  color: $White;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    border-top: 2px solid $White;
+    border-right: 2px solid $White;
+    width: 25%;
+    height: 25%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
   }
 }
